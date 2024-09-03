@@ -1,9 +1,37 @@
 import Image from "next/image";
 
+const LABEL =
+  "Describe a famous painting without saying its name or the artist!";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <main className="px-5 py-6 flex flex-col items-center h-full">
+      <h1 className="text-2xl sm:text-5xl mb-5 py-3 font-bold">ArtMatch 👩‍🎨</h1>
+      <div className="bg-black border-solid border-[5vmin] rounded-sm border-x-stone-600 border-y-stone-700 w-3/4 aspect-square flex items-center mb-5 shadow-2xl">
+        <h2 className="text-base sm:text-2xl tracking-wider mx-10 text-center">
+          {LABEL}
+        </h2>
+      </div>
+      <form className="flex flex-col items-center w-3/4">
+        <label htmlFor="instruction" className="sr-only">
+          {LABEL}
+        </label>
+        <textarea
+          name=""
+          id="instruction"
+          rows={4}
+          placeholder="A woman with long brown hair..."
+          required
+          className="w-full mb-5 rounded-md text-base sm:text-2xl text-black py-2 px-4"
+        ></textarea>
+        <button
+          type="submit"
+          className="bg-stone-500 rounded-md w-full py-4 text-lg sm:text-3xl tracking-wider"
+        >
+          Create
+        </button>
+      </form>
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">app/page.tsx</code>
@@ -107,7 +135,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
