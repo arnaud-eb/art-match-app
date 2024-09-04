@@ -10,6 +10,8 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   title: "ArtMatch",
+  description:
+    "Picasso at your fingertips: Describe it, and watch art come alive!",
 };
 
 export default function RootLayout({
